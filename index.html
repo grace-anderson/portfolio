@@ -12,7 +12,6 @@
       <h1>Helen Anderson</h1>
       <nav>
         <ul>
-          <!-- TO DO - add anchor links to sections in the page -->
           <li class="nav-format"><a href="#about-me">About Me</a></li>
           <li class="nav-format"><a href="#work">Work</a></li>
           <li class="nav-format"><a href="#contact-me">Contact Me</a></li>
@@ -42,90 +41,66 @@
         </div>
       </section>
       <!-- About me heading and paragraph -->
-      <section>
-        <h2 id="about-me">About Me</h2>
-        <p>
-          Hello! Welcome to my portfolio. I'm currently enrolled in the
-          <a href="https://techbootcamp.sydney.edu.au/coding/" target="_blank"
-            >University of Sydney's Coding Bootcamp</a
-          >
-          and am looking to collaborate on web application projects.
-        </p>
-        <p>
-          I love solving problems and am currently learning javascript and
-          design thinking. Also I love getting involved in business process
-          analysis and design and service design.
-        </p>
+      <section class="section">
+        <h2 id="about-me" class="section-left">About Me</h2>
+        <div class="section-right">
+          <p>
+            Hello! Welcome to my portfolio. I'm currently enrolled in the
+            <a href="https://techbootcamp.sydney.edu.au/coding/" target="_blank"
+              >University of Sydney's Coding Bootcamp</a
+            >
+            and am looking to collaborate on web application projects.
+          </p>
+          <p>
+            I love solving problems and am currently learning javascript and
+            design thinking. I also enjoy getting involved in business process
+            analysis and design and service design.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <h2 id="work" class="section-left">Work</h2>
+        <div class="section-right">
+
+        </div>
       </section>
       <!-- work  -->
-      <section>
-        <h2 id="work">Work</h2>
-        <!-- highlighted work with large image -->
-        <article>
-          <header>
-            <h4></h4>
-            <p></p>
-          </header>
-          <!-- div for adding image -->
-          <div></div>
-        </article>
-        <!-- four pieces of work -->
-        <!-- first piece of work -->
-        <article>
-          <header>
-            <h4></h4>
-            <p></p>
-          </header>
-          <!-- div for adding image -->
-          <div></div>
-        </article>
-        <!-- second piece of work -->
-        <article>
-          <header>
-            <h4></h4>
-            <p></p>
-          </header>
-          <!-- div for adding image -->
-          <div></div>
-        </article>
-        <!-- third piece of work -->
-        <article>
-          <header>
-            <h4></h4>
-            <p></p>
-          </header>
-          <!-- div for adding image -->
-          <div></div>
-        </article>
-        <!-- fourth piece of work -->
-        <article>
-          <header>
-            <h4></h4>
-            <p></p>
-          </header>
-          <!-- div for adding image -->
-          <div></div>
-        </article>
-      </section>
+      <!-- TODO-WORK -->
       <!-- contact me section -->
-      <section>
-        <h2 id="contact-me">Contact Me</h2>
-        <!-- TODO - semantic elements for phone number and email -->
-        <ul>
-          <li><a href="#">+61 450 010 325</a></li>
-          <li><a href="#">helen.g.anderson@me.com</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
+      <section class="section">
+        <h2 id="contact-me" class="section-left">Contact Me</h2>
+        <div class="section-right">
+          <address>
+            <li><a href="tel:+61450010325">+61 450 010 325</a></li>
+            <li>
+              <a href="mailto:helen.g.anderson@me.com"
+                >helen.g.anderson@me.com</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/grace-anderson" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/helenganderson/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </address>
+        </div>
       </section>
     </main>
     <footer>
       <!-- TODO - add copyright symbol -->
-      <h3>Copyright Helen G Anderson 2022</h3>
-      <p>
+      <h4>Copyright Helen G Anderson 2022</h4>
+      <p class="tiny-text">
         Arrow imaged adapted from a photo by
         <a
           href="https://unsplash.com/@charlotablunarova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          target="_blank"
           >Charlota Blunarova</a
         >
       </p>
