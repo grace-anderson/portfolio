@@ -1,0 +1,116 @@
+:root {
+  --dark-purple: #711673;
+  --med-purple: #8a1b8c;
+  --light-purple: #a62d7b;
+  --orange: #f25e3d;
+  --pink: #f2506e;
+  --white: #fff;
+  --black: #000;
+}
+
+::selection {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--orange);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 2rem 1rem;
+}
+
+.page-title {
+  padding: 1rem 1.2rem;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--dark-purple);
+  font-weight: 700;
+}
+
+.nav-format {
+  border-bottom: 3px solid var(--pink);
+  margin: 0 0.6rem;
+}
+
+.header-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 4rem;
+}
+
+.header-image img {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.image-subtitle {
+  background-color: var(--pink);
+  width: 32rem;
+  padding: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  align-self: flex-end;
+  margin-top: -7rem;
+  margin-right: 1rem;
+}
+
+.image-subtitle h3 {
+  color: var(--white);
+  margin-bottom: 0;
+}
