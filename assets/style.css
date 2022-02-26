@@ -145,13 +145,29 @@ nav li a {
 }
 
 /* about me and contact me css */
-.section {
+/* .section {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-}
+} */
+.section {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ section h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 2 70%;
+ }
 
 .section-left {
   flex-grow: 1;
