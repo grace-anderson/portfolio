@@ -15,6 +15,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,6 +94,9 @@ address a:last-child {
 
 /* page header and nav*/
 
+/* TODO transitions between responsive sizes */
+/* TODO CSS Scroll from nav to anchor links */
+
 .page-header {
   display: flex;
   flex-wrap: wrap;
@@ -141,9 +145,6 @@ nav li a {
 }
 
 .header-image img {
-  /* flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 100%; */
   flex: 1 0 100%;
   width: 100%;
 }
@@ -269,7 +270,6 @@ address {
   color: var(--dark-purple);
 }
 
-/* TODO - all the links are not updating to the dark color*/
 address li a {
   color: var(--dark-purple);
 }
@@ -359,9 +359,44 @@ footer h4 {
     border-left: 3px solid var(--med-purple);
   }
 
-  /*TODO - unable to update images to display with first one 100% width, remaining 50% width */
+  /*TODO - update images to display with first one 100% width, remaining 50% width 
+  BUT cannot get the small images on the row*/
+  /* .article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+  article:not(:first-child) {
+    width: 50%;
+  }
+  article img {
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 992px) {
   /* TODO */
+  /* Something strange is happening after clicking on anchor links -> the display appears to be reverting back to mobile view 
+  Actually the page is zooming out after clicking on the anchors... how weird????  */
+
+  p {
+    margin: 0 2rem 2rem 1rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .image-subtitle {
+    margin: -12rem 8rem 6rem 0;
+    padding: 2rem;
+  }
+
+  .image-subtitle h3 {
+    font-size: 3rem;
+  }
+
+  .header-image img {
+    margin-bottom: 2rem;
+  }
 }
