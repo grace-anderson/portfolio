@@ -58,16 +58,17 @@ h6 {
 }
 
 p {
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 2rem 2rem 1rem;
   font-size: 1.5rem;
   line-height: 1.2;
 }
 
 p:last-child {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-p a, address a {
+p a,
+address a {
   text-decoration: none;
   color: var(--pink);
 }
@@ -88,6 +89,10 @@ address a:visited {
   color: var(--pink);
 }
 
+address a:last-child {
+  margin-bottom: 0;
+}
+
 /* nav css */
 
 nav ul {
@@ -103,6 +108,7 @@ nav li a {
   font-size: 1.8rem;
   color: var(--dark-purple);
   font-weight: 700;
+  line-height: 1.5;
 }
 
 .nav-format {
@@ -153,21 +159,20 @@ nav li a {
   align-items: flex-start;
 } */
 .section {
-  margin: 50px auto;
-  padding-bottom: 50px;
+  margin: 2rem auto;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
- }
+}
 
- section h2 {
+section h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex: 2 70%;
- }
+  flex: 2 100%;
+}
 
 .section-left {
   flex-grow: 1;
@@ -178,20 +183,75 @@ nav li a {
 }
 
 .section-right {
-  flex-basis: 70%;
-  margin-right: 2rem;
+  flex-basis: 100%;
+  margin-right: 1rem;
+  padding-left: 1rem;
   border-left: 2px solid var(--med-purple);
 }
 
+/* display work articles */
+
+/* container to organise the images */
+.article-container {
+  display: flex;
+  flex-direction: column; 
+  flex: wrap;
+  justify-content: space-between;
+}
+
+article {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article header h3, article header p {
+  color: var(--white);
+  padding-left: 1rem;
+}
+
+article header {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  align-self: flex-start;
+  background-color: var(--pink);
+  margin-top: -6rem; 
+  margin-bottom: 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0; 
+}
+
+figure {
+border: 3px solid var(--pink);
+}
+
+figure, img {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+/* TODO header is also updating opacity - should not do this */
+figure:hover,
+figure:hover {
+  box-shadow: inset 0px 0px 10px var(--pink),
+    0 0 20px var(--pink);
+    opacity: 0.8;
+}
+
+/* Contact me address */
+
 address {
-  margin-left: 2rem;
+  margin-left: 1rem;
   font-size: 1.5rem;
   line-height: 1.5;
 }
-
-/* Work section CSS */
-
-
 
 /* footer css */
 
@@ -200,7 +260,7 @@ footer {
   flex-flow: row wrap;
   justify-items: center;
   margin: 3rem 2rem 0 2rem;
-  padding-top: 2rem;
+  padding: 2rem 0;
   border-top: 2px solid var(--med-purple);
 }
 
@@ -216,4 +276,5 @@ footer h4 {
 
 .tiny-text {
   font-size: 1rem;
+  margin: 0;
 }
