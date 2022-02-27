@@ -35,13 +35,11 @@ h6 {
 
 h1 {
   font-size: 4rem;
-  margin: 2rem 1rem;
-  text-align: center;
 }
 
 h2 {
   font-size: 3rem;
-  margin-left: 1rem;
+  margin: 1rem 0 0 1rem;
 }
 
 h3 {
@@ -93,13 +91,30 @@ address a:last-child {
   margin-bottom: 0;
 }
 
-/* nav css */
+/* page header and nav*/
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.page-header h1 {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 100%;
+  align-self: center;
+}
 
 nav ul {
   display: flex;
   flex-flow: row wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin: 1rem 1rem 2rem 1rem;
 }
 
@@ -131,7 +146,6 @@ nav li a {
   flex-basis: 100%; */
   flex: 1 0 100%;
   width: 100%;
-  height: auto;
 }
 
 .image-subtitle {
@@ -142,7 +156,8 @@ nav li a {
   flex-basis: 100%;
   align-self: flex-end;
   margin-top: -6rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin: -6rem 2rem 0 0;
 }
 
 .image-subtitle h3 {
@@ -150,17 +165,9 @@ nav li a {
   margin-bottom: 0;
 }
 
-/* about me and contact me css */
-/* .section {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-} */
 .section {
   margin: 2rem auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -191,27 +198,34 @@ section h2 {
 
 /* display work articles */
 
-/* container to organise the images */
+/* container to organise all work image articles*/
 .article-container {
   display: flex;
-  flex-direction: column; 
-  flex: wrap;
+  flex-direction: column;
   justify-content: space-between;
 }
 
+/* container for each article card*/
+.article-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* TODO make all the articles (and their images) the same height - unable to do */
 article {
   flex-grow: 1;
   flex-shrink: 1;
-  width: 100%;
-  height: auto;
   margin-bottom: 1rem;
 }
 
 article img {
-  max-width: 100%;
+  width: 100%;
 }
 
-article header h3, article header p {
+article header h3,
+article header p {
   color: var(--white);
   padding-left: 1rem;
 }
@@ -222,27 +236,27 @@ article header {
   flex-basis: 100%;
   align-self: flex-start;
   background-color: var(--pink);
-  margin-top: -6rem; 
+  margin-top: -6rem;
   margin-bottom: 0.4rem;
-  padding: 0.2rem 0.6rem 0.2rem 0; 
+  padding: 0.2rem 0.6rem 0.2rem 0;
 }
 
 figure {
-border: 3px solid var(--pink);
+  border: 3px solid var(--pink);
 }
 
-figure, img {
+figure,
+img {
   padding: 0;
   margin: 0;
   line-height: 0;
 }
 
-/* TODO header is also updating opacity - should not do this */
+/* TODO header box is also updating opacity- should remain 100% opacity */
 figure:hover,
-figure:hover {
-  box-shadow: inset 0px 0px 10px var(--pink),
-    0 0 20px var(--pink);
-    opacity: 0.8;
+figure:focus {
+  box-shadow: inset 0px 0px 10px var(--pink), 0 0 20px var(--pink);
+  opacity: 0.8;
 }
 
 /* Contact me address */
@@ -251,6 +265,13 @@ address {
   margin-left: 1rem;
   font-size: 1.5rem;
   line-height: 1.5;
+  font-weight: 700;
+  color: var(--dark-purple);
+}
+
+/* TODO - all the links are not updating to the dark color*/
+address li a {
+  color: var(--dark-purple);
 }
 
 /* footer css */
@@ -277,4 +298,70 @@ footer h4 {
 .tiny-text {
   font-size: 1rem;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  /* updates to page header */
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2rem 1rem 1rem 2rem;
+    width: 100%;
+  }
+
+  .page-header h1,
+  .page-header nav {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+  }
+
+  .page-header h1 {
+    align-self: flex-start;
+    padding-left: 2rem;
+  }
+
+  .page-header li {
+    padding-top: 0.4rem;
+  }
+
+  /* update to h3 on the header image */
+
+  .image-subtitle {
+    margin: -8rem 6rem 2rem 0;
+  }
+
+  .image-subtitle h3 {
+    font-size: 2.5rem;
+  }
+
+  /* main section updates */
+  .section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .section-left {
+    margin-top: 0;
+  }
+
+  /* TODO - cannot make the headings align right */
+  .section-left h2 {
+    /* align-self: right;  */
+    text-align: right;
+  }
+
+  .section-right {
+    padding-left: 2rem;
+    border-left: 3px solid var(--med-purple);
+  }
+
+  /*TODO - unable to update images to display with first one 100% width, remaining 50% width */
+}
+
+@media screen and (min-width: 992px) {
+  /* TODO */
 }
