@@ -102,16 +102,20 @@ address a:last-child {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 2rem;
   width: 100%;
 }
 
 .page-header h1 {
   flex-grow: 1;
-  flex-shrink: 2;
+  flex-shrink: 1;
   flex-basis: 100%;
   align-self: center;
+}
+
+h1 {
+  text-align: center;
 }
 
 nav ul {
@@ -172,21 +176,23 @@ nav li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 section h2 {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  flex: 2 100%;
+  /* align-items: center; */
+  align-items: flex-start;
+  /* text-align: right; */
+  flex: 1 1 100%;
 }
 
 .section-left {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 30%;
-  text-align: right;
+  /* text-align: right; */
   padding: 0rem 1rem 1rem 1rem;
 }
 
@@ -202,14 +208,17 @@ section h2 {
 /* container to organise all work image articles*/
 .article-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 /* container for each article card*/
 .article-card {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -233,7 +242,7 @@ article header p {
 
 article header {
   flex-grow: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
   flex-basis: 100%;
   align-self: flex-start;
   background-color: var(--pink);
@@ -301,6 +310,16 @@ footer h4 {
 }
 
 @media screen and (min-width: 768px) {
+
+  h1 {
+    text-align: left;
+  }
+
+  nav ul {
+    justify-content:end;
+    margin: 1rem 2rem 2rem 1rem;
+  }
+
   /* updates to page header */
   .page-header {
     display: flex;
@@ -349,9 +368,8 @@ footer h4 {
   }
 
   /* TODO - cannot make the headings align right */
-  .section-left h2 {
-    /* align-self: right;  */
-    text-align: right;
+  section h2 {
+    justify-content: flex-end;
   }
 
   .section-right {
@@ -359,45 +377,23 @@ footer h4 {
     border-left: 3px solid var(--med-purple);
   }
 
-  /*TODO - update images to display with first one 100% width, remaining 50% width 
-  BUT cannot get the small images on the row*/
-  /* .article-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} */
-/* .little-images-row {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.little-images-row figure {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 100%;
-}
-
-.little-images-row header {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 100%;
-}
-*/
   article:not(:first-child) {
     width: 48%;
   }
   article img {
     object-fit: cover;
     width: 100%;
-  } 
+  }
 }
 
 @media screen and (min-width: 992px) {
   /* TODO */
   /* Something strange is happening after clicking on anchor links -> the display appears to be reverting back to mobile view 
   Actually the page is zooming out after clicking on the anchors... how weird????  */
+
+  h2 {
+    margin-right: 1rem;
+  }
 
   p {
     margin: 0 2rem 2rem 1rem;
