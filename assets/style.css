@@ -309,6 +309,28 @@ footer h4 {
   margin: 0;
 }
 
+@media screen and (max-width: 300px) {
+
+  .header-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  
+  .image-subtitle {
+    background-color: var(--pink);
+    padding: 1rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    margin: -6rem 2rem 2rem 2rem;
+  }
+
+ }
+
+
 @media screen and (min-width: 768px) {
 
   h1 {
