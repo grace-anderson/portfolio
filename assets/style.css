@@ -311,12 +311,16 @@ footer h4 {
 
 @media screen and (max-width: 300px) {
 
+  p {
+    margin-right: 1rem;
+  }
+
   .header-column {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   
   .image-subtitle {
