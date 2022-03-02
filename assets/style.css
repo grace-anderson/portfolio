@@ -194,6 +194,29 @@ section h2 {
   border-left: 2px solid var(--med-purple);
 }
 
+/* About me */
+figure#my-image {
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-shadow: none;
+  border: none;
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.first-image {
+  flex: 0 1 100%;
+  max-width: 200px;
+  height: auto;
+  border: 2px solid var(--pink);
+}
+
+figcaption {
+  margin-top: 1rem;
+  /* text-align: center; */
+}
+
 /* Work section - articles */
 .article-container {
   display: flex;
